@@ -1,0 +1,1958 @@
+{
+  "@@locale": "en",
+  "appName": "TDC-mena Garage",
+  "@appName": {
+    "description": "Product name. Stays in Latin script in every language."
+  },
+  "launchLoadingLabel": "TDC-mena Garage is loading",
+  "@launchLoadingLabel": {
+    "description": "Screen reader label for the launch screen while data loads."
+  },
+  "launchErrorTitle": "We couldn't open your garage",
+  "launchErrorBody": "Something went wrong while loading your data. Your data is safe on this phone.",
+  "actionRetry": "Try again",
+  "languageSwitchLabel": "العربية",
+  "@languageSwitchLabel": {
+    "description": "Button that switches the app to the OTHER language, written in that language."
+  },
+  "languageSwitchSemantic": "Switch the app to Arabic",
+  "introSkip": "Skip",
+  "introNext": "Next",
+  "introGetStarted": "Get started",
+  "introSignIn": "I already have an account · Sign in",
+  "introPageLabel": "Page {current} of {total}",
+  "@introPageLabel": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "introPage1Title": "Your car's health at a glance",
+  "introPage1Body": "See what needs attention before it becomes a repair bill.",
+  "introPage2Title": "Never miss a service",
+  "introPage2Body": "Reminders before oil, brakes and tires are due, based on typical intervals.",
+  "introPage3Title": "Start now, no account needed",
+  "introPage3Body": "Your garage stays on this phone. Back it up whenever you like.",
+  "healthScoreLabel": "Health score",
+  "healthBandGood": "Good",
+  "statMileage": "Mileage",
+  "statMileageSub": "Total",
+  "statNextService": "Next service",
+  "statNextServiceSub": "Days away",
+  "statThisYear": "This year",
+  "statThisYearSub": "Spent",
+  "unitKm": "km",
+  "actionContinue": "Continue",
+  "actionClose": "Close",
+  "actionClearSearch": "Clear search",
+  "stateSelected": "Selected",
+  "stepLabel": "Step {current} of {total}: {name}",
+  "@stepLabel": {
+    "placeholders": {
+      "current": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "stepCountry": "Country",
+  "stepBrand": "Brand",
+  "stepCar": "Car",
+  "stepService": "Service",
+  "unitMi": "mi",
+  "countryTitle": "Where do you drive?",
+  "countryBody": "We'll set your currency, distance unit and popular brands. You can change these any time.",
+  "countryCardLabel": "Country",
+  "countryChange": "Change",
+  "countryNotSet": "Not set",
+  "countryOther": "Other / not set",
+  "countryOtherHint": "USD, km and the most popular brands",
+  "popularListStandard": "Popular brands",
+  "popularListGulf": "Gulf brands",
+  "popularListEgypt": "Egypt brands",
+  "countryPickerTitle": "Choose your country",
+  "countrySearchHint": "Search country…",
+  "countryNoResults": "No countries found",
+  "countryNoResultsHint": "Try another spelling, or choose Other / not set.",
+  "consentTitle": "Help us improve the app",
+  "consentBody": "Share anonymous usage data. No advertising, no tracking across apps.",
+  "consentAllow": "Allow",
+  "consentDeny": "Don't allow",
+  "consentRequiredHint": "Choose Allow or Don't allow to continue.",
+  "privacyPolicy": "Privacy policy",
+  "garageTitle": "Garage",
+  "@garageTitle": {
+    "description": "Large decorative title on brand selection. Arabic copy to be confirmed by the reviewer."
+  },
+  "brandPrompt": "Select your car brand",
+  "brandScreenTitle": "Select your car brand",
+  "brandSearchHint": "Search brand…",
+  "brandSelect": "Select",
+  "brandOther": "Other brand",
+  "brandOtherHint": "Type your brand",
+  "brandOtherFieldLabel": "Brand name",
+  "brandContinueWith": "Continue with {brand}",
+  "@brandContinueWith": {
+    "placeholders": {
+      "brand": {
+        "type": "String"
+      }
+    }
+  },
+  "brandNoResults": "No brands found",
+  "brandFoundInTabs": "Found in other tabs:",
+  "brandAddAsOther": "Add “{name}” as other brand",
+  "@brandAddAsOther": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "tabPopular": "Popular",
+  "tabEuropean": "European",
+  "tabJapanese": "Japanese",
+  "tabKorean": "Korean",
+  "tabChinese": "Chinese",
+  "tabAmerican": "American",
+  "tabSemantic": "{name}, tab {index} of {count}",
+  "@tabSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "index": {
+        "type": "int"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "discardVehicleTitle": "Discard this vehicle?",
+  "discardVehicleBody": "The brand you chose won't be saved.",
+  "actionDiscard": "Discard",
+  "actionKeepEditing": "Keep editing",
+  "modelSubtitle": "Choose your model",
+  "modelOther": "Other model",
+  "modelOtherHint": "Type your model",
+  "modelNameLabel": "Model name",
+  "bodyTypeLabel": "Body type",
+  "bodyTypeHelper": "Picks the illustration for your car.",
+  "bodySedan": "Sedan",
+  "bodyHatchback": "Hatchback",
+  "bodySuv": "SUV",
+  "bodyCoupe": "Coupe",
+  "bodyWagon": "Wagon",
+  "bodyPickup": "Pickup",
+  "bodyVan": "Van",
+  "usuallyPetrol": "Usually petrol",
+  "usuallyDiesel": "Usually diesel",
+  "usuallyHybrid": "Usually hybrid",
+  "usuallyEv": "Usually electric",
+  "modelsComingSoon": "Model list for this brand is coming soon.",
+  "modelNeedBrandTitle": "Choose a brand first",
+  "modelNeedBrandBody": "We couldn't find the brand for this car.",
+  "modelNeedBrandAction": "Choose brand",
+  "positionOf": "{index} of {count}",
+  "@positionOf": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "detailsSubtitle": "Tell us about your car",
+  "fuelTypeLabel": "Fuel type",
+  "fuelTypeHelper": "Sets your maintenance schedule.",
+  "fuelPetrol": "Petrol",
+  "fuelDiesel": "Diesel",
+  "fuelHybrid": "Hybrid",
+  "fuelEv": "EV",
+  "odometerLabel": "Current odometer",
+  "odometerHelper": "Check your dashboard.",
+  "odometerMissing": "Enter your current mileage",
+  "odometerNotNumber": "Enter numbers only",
+  "odometerTooHigh": "That looks too high. Check the number.",
+  "appearanceTitle": "Appearance",
+  "paintColorLabel": "Paint colour",
+  "paintObsidianBlack": "Obsidian Black",
+  "paintPolarWhite": "Polar White",
+  "paintSilver": "Silver",
+  "paintGunmetalGrey": "Gunmetal Grey",
+  "paintDesertSand": "Desert Sand",
+  "paintChampagne": "Champagne",
+  "paintMidnightBlue": "Midnight Blue",
+  "paintSkyBlue": "Sky Blue",
+  "paintRacingRed": "Racing Red",
+  "paintSunsetOrange": "Sunset Orange",
+  "paintForestGreen": "Forest Green",
+  "paintBronze": "Bronze",
+  "moreDetailsTitle": "Add nickname, year, VIN and more",
+  "moreDetailsOptional": "Optional",
+  "nicknameLabel": "Nickname",
+  "yearLabel": "Year",
+  "plateLabel": "Licence plate",
+  "vinLabel": "VIN",
+  "purchaseDateLabel": "Purchase date",
+  "vinLengthWarning": "VINs are usually 17 characters. Keep it if your car is older than 1981.",
+  "vinInvalid": "VINs don't use the letters I, O or Q.",
+  "duplicateVinTitle": "You already have a car with this VIN",
+  "duplicateVinBody": "{name} has the same VIN. Add anyway?",
+  "@duplicateVinBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "duplicateVinAdd": "Add anyway",
+  "duplicateVinChange": "Change VIN",
+  "dateToday": "Today",
+  "dateClear": "Clear",
+  "dateDone": "Done",
+  "detailsNeedModelTitle": "Choose a model first",
+  "detailsNeedModelBody": "We couldn't find the model for this car.",
+  "duplicateVinUnnamed": "Another car in your garage",
+  "baselineTitle": "When were these last done?",
+  "baselineSubtitle": "This makes your health score accurate. Skip anything you don't know.",
+  "newCarTitle": "My car is new",
+  "newCarSubtitle": "Delivered recently? We'll start everything fresh.",
+  "deliveryDateLabel": "Delivery date",
+  "startingMileageLabel": "Starting mileage",
+  "newCarNote": "All items start from your delivery date. Your score starts at 100.",
+  "baselineOilService": "Oil change or service",
+  "baselineBrakes": "Brakes",
+  "baselineTires": "Tires",
+  "baselineBattery": "Battery",
+  "baselineDateLabel": "Date",
+  "baselineMileageLabel": "Mileage",
+  "baselineDontKnow": "I don't know",
+  "baselineUnknownBadge": "Unknown",
+  "baselineFooter": "Other items like filters and coolant start as Unknown. You can set them later in your schedule.",
+  "actionSaveVehicle": "Save vehicle",
+  "baselineKmAboveOdometer": "Can't be more than your current mileage ({mileage}).",
+  "@baselineKmAboveOdometer": {
+    "placeholders": {
+      "mileage": {
+        "type": "String"
+      }
+    }
+  },
+  "baselineCardSemantic": "{item}, last done",
+  "@baselineCardSemantic": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "baselineUnknownAnnounce": "{item} marked as unknown",
+  "@baselineUnknownAnnounce": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "baselineKnownAnnounce": "{item} can be filled in again",
+  "@baselineKnownAnnounce": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryOldTitle": "Some items may already be due",
+  "deliveryOldBody": "Your delivery date is {age}. Items with shorter intervals will show as due or overdue.",
+  "@deliveryOldBody": {
+    "placeholders": {
+      "age": {
+        "type": "String"
+      }
+    }
+  },
+  "deliveryOldBodyDistance": "Your car has been driven past some intervals since delivery. Those items will show as due or overdue.",
+  "deliveryAgeYears": "{count, plural, =1{1 year ago} other{{count} years ago}}",
+  "@deliveryAgeYears": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deliveryAgeMonths": "{count, plural, =1{1 month ago} other{{count} months ago}}",
+  "@deliveryAgeMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "deliveryKeep": "Keep this date",
+  "deliveryChange": "Change date",
+  "deliveryDateMissing": "Choose your delivery date",
+  "baselineNeedDetailsTitle": "Add your car's details first",
+  "baselineNeedDetailsBody": "We couldn't find the details for this car.",
+  "primerTitle": "Never miss a service",
+  "primerBody": "We'll remind you 30, 7 and 1 day before something is due, at 9:00. You can turn this off any time.",
+  "primerDeniedHint": "Notifications are off for TDC Garage. Turn them on in Settings.",
+  "primerTurnOn": "Turn on reminders",
+  "primerOpenSettings": "Open Settings",
+  "primerNotNow": "Not now",
+  "primerPreviewApp": "TDC Garage",
+  "primerPreviewTime": "now",
+  "primerPreviewText": "{vehicle} · {item} due in 7 days",
+  "@primerPreviewText": {
+    "placeholders": {
+      "vehicle": {
+        "type": "String"
+      },
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "primerPreviewSemantic": "Example notification: {text}",
+  "@primerPreviewSemantic": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "primerPillExample": "Due in 7 days",
+  "remindersOnToast": "Reminders are on",
+  "primerPreviewFallbackItem": "Oil change",
+  "navGarage": "Garage",
+  "navHistory": "History",
+  "navAdd": "Add",
+  "navProfile": "Profile",
+  "dashboardSwitchVehicle": "{name}, switch vehicle",
+  "@dashboardSwitchVehicle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardModelYear": "{model} · {year}",
+  "@dashboardModelYear": {
+    "placeholders": {
+      "model": {
+        "type": "String"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "dashboardVehicleDots": "Vehicle {index} of {count}",
+  "@dashboardVehicleDots": {
+    "placeholders": {
+      "index": {
+        "type": "int"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "actionMoreOptions": "More options",
+  "actionCancel": "Cancel",
+  "actionDelete": "Delete",
+  "menuSchedule": "Schedule",
+  "menuMileageHistory": "Mileage history",
+  "menuEditVehicle": "Edit vehicle",
+  "menuDeleteVehicle": "Delete vehicle",
+  "deleteVehicleTitle": "Delete {name}?",
+  "@deleteVehicleTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteVehicleBody": "This deletes its schedule, service history and reminders. This can't be undone.",
+  "deleteVehicleDone": "{name} deleted",
+  "@deleteVehicleDone": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "bandExcellent": "Excellent",
+  "bandGood": "Good",
+  "bandNeedsAttention": "Needs attention",
+  "bandUrgent": "Urgent",
+  "healthBasedOnTypical": "Based on typical intervals · {count} unknown",
+  "@healthBasedOnTypical": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthSemantic": "Health score {score} percent, {band}",
+  "@healthSemantic": {
+    "placeholders": {
+      "score": {
+        "type": "int"
+      },
+      "band": {
+        "type": "String"
+      }
+    }
+  },
+  "statUpdated": "{count, plural, =0{Updated today} =1{Updated yesterday} other{Updated {count} days ago}}",
+  "@statUpdated": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statDaysAway": "Days away",
+  "statDue": "Due",
+  "statToday": "Today",
+  "statDaysOverdue": "Days overdue",
+  "statSetUpSchedule": "Set up your schedule",
+  "statDistanceToGo": "{unit} to go",
+  "@statDistanceToGo": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "statItems": "{count, plural, =1{1 item} other{{count} items}}",
+  "@statItems": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statDateItems": "{date} · {items}",
+  "@statDateItems": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "items": {
+        "type": "String"
+      }
+    }
+  },
+  "statSpent": "Spent",
+  "statServices": "{count, plural, =0{No costs yet} =1{1 service} other{{count} services}}",
+  "@statServices": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "statSomeNotIncluded": "Some records not included",
+  "statCardSemantic": "{label}, {value} {sublabel}, {footer}",
+  "@statCardSemantic": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "sublabel": {
+        "type": "String"
+      },
+      "footer": {
+        "type": "String"
+      }
+    }
+  },
+  "statCarouselLabel": "Stat cards",
+  "statCarouselHint": "Swipe up or down to change",
+  "unitKmWord": "kilometres",
+  "unitMiWord": "miles",
+  "alertOverdueOne": "{item} overdue",
+  "@alertOverdueOne": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "alertOverdueMany": "{count} items overdue",
+  "@alertOverdueMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "alertDueSoon": "{item} due soon",
+  "@alertDueSoon": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "alertUnknown": "Complete your schedule · {count} unknown",
+  "@alertUnknown": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "alertStaleMileage": "Update your mileage · {count} days",
+  "@alertStaleMileage": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "alertAllGood": "All good",
+  "upcomingTitle": "Upcoming",
+  "upcomingInDays": "{count, plural, =0{Due today} =1{In 1 day} other{In {count} days}}",
+  "@upcomingInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upcomingOverdueDays": "{count, plural, =0{Overdue} =1{Overdue by 1 day} other{Overdue by {count} days}}",
+  "@upcomingOverdueDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "upcomingInDistance": "In {distance}",
+  "@upcomingInDistance": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "statusOverdue": "Overdue",
+  "statusDueSoon": "Due soon",
+  "statusOk": "OK",
+  "switcherTitle": "Your garage",
+  "switcherCount": "{count} of {max} vehicles",
+  "@switcherCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "switcherAddVehicle": "Add vehicle",
+  "switcherLimitReached": "Limit reached. Contact support.",
+  "switcherManage": "Manage vehicles",
+  "switcherOverdue": "{count} overdue",
+  "@switcherOverdue": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "switcherNotSetUp": "Not set up",
+  "switcherCurrent": "Current vehicle",
+  "switcherRowSemantic": "{name}, {subline}, {status}",
+  "@switcherRowSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "subline": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSummaryOverdue": "{count, plural, =1{1 item is overdue} other{{count} items are overdue}}",
+  "@healthSummaryOverdue": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthSummarySoon": "{count, plural, =1{1 item is due within 30 days} other{{count} items are due within 30 days}}",
+  "@healthSummarySoon": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthSummaryJoin": "{first} and {second}.",
+  "@healthSummaryJoin": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "healthSummarySentence": "{text}.",
+  "@healthSummarySentence": {
+    "placeholders": {
+      "text": {
+        "type": "String"
+      }
+    }
+  },
+  "healthNothingLowering": "Nothing is lowering your score",
+  "healthSectionLowering": "Lowering your score",
+  "healthReasonOverdueKm": "Overdue by {distance}",
+  "@healthReasonOverdueKm": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "healthReasonDueInDays": "{count, plural, =0{Due today} =1{Due in 1 day} other{Due in {count} days}}",
+  "@healthReasonDueInDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "healthReasonDueInKm": "Due in about {distance}",
+  "@healthReasonDueInKm": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "healthDoubleBadge": "×2",
+  "healthRowSemantic": "{item}, {reason}, minus {points} points",
+  "@healthRowSemantic": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "reason": {
+        "type": "String"
+      },
+      "points": {
+        "type": "int"
+      }
+    }
+  },
+  "healthCountsDouble": "counts double",
+  "healthSectionNotCounted": "Not counted",
+  "healthUnknownSetLastDone": "Unknown: set last done",
+  "healthSnoozedUntil": "Snoozed until {date}",
+  "@healthSnoozedUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "healthHowTitle": "How the score works",
+  "healthHowBody": "Your score starts at 100. Overdue items lose 5 to 15 points depending on how important they are, and items due within 30 days lose 2. Items more than 30 days or 1,000 km overdue count double.",
+  "healthTemplateLine": "Typical intervals for {fuel} · template v{version}",
+  "@healthTemplateLine": {
+    "placeholders": {
+      "fuel": {
+        "type": "String"
+      },
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "healthSeeSchedule": "See your schedule",
+  "mileageTitle": "Update mileage",
+  "mileageLast": "Last: {reading} · {date}",
+  "@mileageLast": {
+    "placeholders": {
+      "reading": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mileageFieldLabel": "New odometer reading in {unit}",
+  "@mileageFieldLabel": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "mileageChooseVehicle": "Choose vehicle",
+  "actionSave": "Save",
+  "actionEdit": "Edit",
+  "mileageViewHistory": "View history",
+  "mileageLowerTitle": "This is lower than your last reading",
+  "mileageLowerBody": "Your last reading was {last} on {date}. Save {value} as a correction?",
+  "@mileageLowerBody": {
+    "placeholders": {
+      "last": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "mileageSaveCorrection": "Save as correction",
+  "mileageJumpTitle": "Is this correct?",
+  "mileageJumpBody": "That's {distance} in {period}.",
+  "@mileageJumpBody": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      },
+      "period": {
+        "type": "String"
+      }
+    }
+  },
+  "mileageDays": "{count, plural, =1{1 day} other{{count} days}}",
+  "@mileageDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mileageJumpConfirm": "Yes, save",
+  "mileageUpdatedToast": "Mileage updated",
+  "mileageAverageLabel": "Average",
+  "mileageAveragePerMonth": "{distance} / month",
+  "@mileageAveragePerMonth": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "mileageAverageBasis": "Based on the last 180 days",
+  "mileageAverageNeedMore": "{count, plural, =0{Add another reading to see your average.} =1{Add another reading tomorrow to see your average.} other{Add another reading in {count} days to see your average.}}",
+  "@mileageAverageNeedMore": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "mileageSourceManual": "Manual",
+  "mileageSourceService": "From service",
+  "mileageSourceSetup": "Baseline",
+  "mileageSourceFuel": "From fill-up",
+  "mileageCorrection": "Correction",
+  "mileageDeleteTitle": "Delete this reading?",
+  "mileageDeleteBody": "{reading} on {date} will be removed.",
+  "@mileageDeleteBody": {
+    "placeholders": {
+      "reading": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "mileageDeleted": "Reading deleted",
+  "mileageServiceHint": "Delete the service record to remove this",
+  "mileageEmptyTitle": "Only your starting reading so far",
+  "mileageRowSemantic": "{reading}, {date}, {source}",
+  "@mileageRowSemantic": {
+    "placeholders": {
+      "reading": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "source": {
+        "type": "String"
+      }
+    }
+  },
+  "scheduleTitle": "Schedule",
+  "scheduleFilterAll": "All",
+  "scheduleFilterCount": "{label} ({count})",
+  "@scheduleFilterCount": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "scheduleUpcoming": "Upcoming",
+  "scheduleNotApplicable": "Not applicable",
+  "scheduleSnoozed": "Snoozed",
+  "scheduleCritical": "Critical",
+  "scheduleDueDateOrKm": "Due {date} or at {distance}",
+  "@scheduleDueDateOrKm": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "scheduleDueDate": "Due {date}",
+  "@scheduleDueDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "scheduleDueKm": "Due at {distance}",
+  "@scheduleDueKm": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "scheduleAddCustom": "Add custom item",
+  "scheduleTemplateTitle": "Typical intervals",
+  "scheduleTemplateBody": "These are typical intervals reviewed by a qualified mechanic. Your manufacturer's schedule may differ. Edit any item to match it.",
+  "scheduleAllGood": "All good. Everything is on schedule.",
+  "scheduleNothingHere": "Nothing here",
+  "scheduleRowSemantic": "{item}, {due}, {status}",
+  "@scheduleRowSemantic": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "due": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "scheduleSectionSemantic": "{section}, {count} items",
+  "@scheduleSectionSemantic": {
+    "placeholders": {
+      "section": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "scheduleSelectItem": "Choose an item to see its details",
+  "itemResetToTypical": "Reset to typical",
+  "itemDelete": "Delete item",
+  "itemDeleteTitle": "Delete {name}?",
+  "@itemDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "itemDeleteBody": "It will be removed from your schedule.",
+  "itemFactInterval": "Interval",
+  "itemFactLastDone": "Last done",
+  "itemFactNextDue": "Next due",
+  "itemFactPredicted": "Predicted",
+  "itemFactScore": "Score impact",
+  "itemEvery": "Every {interval}",
+  "@itemEvery": {
+    "placeholders": {
+      "interval": {
+        "type": "String"
+      }
+    }
+  },
+  "itemMonths": "{count, plural, =1{month} other{{count} months}}",
+  "@itemMonths": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemOr": "{first} or {second}",
+  "@itemOr": {
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "second": {
+        "type": "String"
+      }
+    }
+  },
+  "itemEdited": "Edited",
+  "itemDateKm": "{date} · {distance}",
+  "@itemDateKm": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "itemSourceBaseline": "Baseline",
+  "itemSourceNewCar": "Delivery",
+  "itemSourceService": "From your service",
+  "itemSourceManual": "Set by you",
+  "itemPredictedValue": "Around {date} at your usual mileage",
+  "@itemPredictedValue": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "itemPoints": "{points} points",
+  "@itemPoints": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "itemNone": "None",
+  "itemNotYet": "Not yet",
+  "itemMarkDone": "Mark as done",
+  "itemSnooze": "Snooze",
+  "itemReschedule": "Reschedule",
+  "itemSnoozeTitle": "Snooze reminders",
+  "itemSnoozeDays": "{count} days",
+  "@itemSnoozeDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "itemSnoozeOverdueNote": "Reminders pause, but the score still counts this as overdue.",
+  "itemRescheduleNote": "Only this time. Later reminders use the normal interval.",
+  "itemRescheduledToast": "Due date moved to {date}",
+  "@itemRescheduledToast": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "itemEditInterval": "Edit interval",
+  "itemNotApplicableToggle": "Not applicable to my car",
+  "itemNotApplicableHint": "Hidden from your score and reminders",
+  "itemSetLastDone": "Set last done",
+  "itemLastDoneSaved": "Last done saved",
+  "itemLastDoneNeedOne": "Enter a date or a mileage",
+  "itemHistoryTitle": "Service history",
+  "itemHistoryEmpty": "No services logged for this item yet.",
+  "actionUndo": "Undo",
+  "itemNotFound": "This item no longer exists",
+  "intervalEditTitle": "Edit interval",
+  "customNameLabel": "Name",
+  "customNameRequired": "Enter a name",
+  "intervalMonthsLabel": "Every … months",
+  "intervalDistanceLabel": "Every … {unit}",
+  "@intervalDistanceLabel": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "intervalMonthsUnit": "months",
+  "intervalNote": "Whichever comes first. Leave one empty to use only the other.",
+  "intervalNeedOne": "Set at least one interval.",
+  "intervalAboveZero": "Must be more than 0",
+  "importanceLabel": "Importance",
+  "severityCritical": "Critical",
+  "severityMajor": "Major",
+  "severityMinor": "Minor",
+  "importanceHelper": "Overdue: {points}",
+  "@importanceHelper": {
+    "placeholders": {
+      "points": {
+        "type": "String"
+      }
+    }
+  },
+  "customLastDoneTitle": "Last done (optional)",
+  "intervalTypical": "Typical: {interval}",
+  "@intervalTypical": {
+    "placeholders": {
+      "interval": {
+        "type": "String"
+      }
+    }
+  },
+  "intervalUpdated": "Interval updated",
+  "customItemAdded": "{name} added",
+  "@customItemAdded": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "discardChangesTitle": "Discard changes?",
+  "templateUpdateBanner": "Typical intervals updated",
+  "templateUpdateReview": "Review",
+  "templateUpdateTitle": "Typical intervals updated",
+  "templateUpdateDefaultSummary": "Some typical intervals changed.",
+  "templateUpdateMonths": "Every {from} → {to} {to, plural, =1{month} other{months}}",
+  "@templateUpdateMonths": {
+    "description": "One changed month interval, for example 'Every 36 → 24 months'.",
+    "placeholders": {
+      "from": {
+        "type": "int"
+      },
+      "to": {
+        "type": "int"
+      }
+    }
+  },
+  "templateUpdateDistance": "{from} → {to}",
+  "@templateUpdateDistance": {
+    "description": "A changed distance interval; values include the unit, e.g. '30,000 km'. Arabic uses ← so the arrow points to the new value.",
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "templateUpdateSeverity": "Importance: {from} → {to}",
+  "@templateUpdateSeverity": {
+    "placeholders": {
+      "from": {
+        "type": "String"
+      },
+      "to": {
+        "type": "String"
+      }
+    }
+  },
+  "templateUpdateNewItem": "New item · {interval}",
+  "@templateUpdateNewItem": {
+    "placeholders": {
+      "interval": {
+        "type": "String"
+      }
+    }
+  },
+  "templateUpdateKept": "Kept: you edited this",
+  "templateUpdateNote": "Reviewed by a qualified mechanic · template v{version}",
+  "@templateUpdateNote": {
+    "placeholders": {
+      "version": {
+        "type": "int"
+      }
+    }
+  },
+  "templateUpdateApply": "Apply",
+  "templateUpdateKeep": "Keep current",
+  "templateUpdateApplied": "Schedule updated",
+  "templateUpdateMenu": "Review updated intervals",
+  "templateUpdateBadge": "Updated intervals",
+  "templateUpdateNothingToApply": "You edited every changed item, so nothing will change.",
+  "nextServiceOverdueDays": "{count, plural, =1{1 day overdue} other{{count} days overdue}}",
+  "nextServiceInDays": "{count, plural, =0{Today} =1{Tomorrow} other{In {count} days}}",
+  "nextServiceInKm": "In about {distance}",
+  "@nextServiceInKm": {
+    "placeholders": {
+      "distance": {
+        "type": "String"
+      }
+    }
+  },
+  "nextServiceKmNote": "Update your mileage now and then to get a date.",
+  "nextServiceDueAround": "Due around then",
+  "nextServiceDoNow": "To do now",
+  "nextServiceLog": "Log service",
+  "nextServiceSeeSchedule": "See full schedule",
+  "nextServiceNothing": "Nothing is due yet. Set when items were last done to see your next service.",
+  "nextServiceSemantic": "{title}: {value}, {detail}",
+  "@nextServiceSemantic": {
+    "description": "Screen reader label for the S-18 heading block.",
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      },
+      "detail": {
+        "type": "String"
+      }
+    }
+  },
+  "spendTitle": "Spending",
+  "spendPreviousYear": "Previous year",
+  "spendNextYear": "Next year",
+  "spendServicesInYear": "{count, plural, =0{No services in {year}} =1{1 service in {year}} other{{count} services in {year}}}",
+  "@spendServicesInYear": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "spendOtherCurrencies": "Records in other currencies aren't included.",
+  "spendChangeCurrency": "Change currency",
+  "spendRecords": "Records",
+  "spendNotInTotal": "Not in total",
+  "spendEmpty": "No costs logged in {year}",
+  "@spendEmpty": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "spendTotalSemantic": "Total for {year}: {amount}, {count}",
+  "@spendTotalSemantic": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      },
+      "amount": {
+        "type": "String"
+      },
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "actionLogService": "Log service",
+  "serviceTypeMaintenance": "Maintenance",
+  "serviceTypeRepair": "Repair",
+  "serviceTypeInspection": "Inspection",
+  "serviceTypeOther": "Other",
+  "serviceRecordSemantic": "{date}, {title}, {detail}, {cost}",
+  "@serviceRecordSemantic": {
+    "description": "Screen reader label of a service record row.",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      },
+      "title": {
+        "type": "String"
+      },
+      "detail": {
+        "type": "String"
+      },
+      "cost": {
+        "type": "String"
+      }
+    }
+  },
+  "historyTitle": "History",
+  "historyYearChip": "Year: {year}",
+  "@historyYearChip": {
+    "placeholders": {
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "historyAllYears": "All years",
+  "historyTypeChip": "Type: {type}",
+  "@historyTypeChip": {
+    "placeholders": {
+      "type": {
+        "type": "String"
+      }
+    }
+  },
+  "historyAllTypes": "All",
+  "historyClear": "Clear",
+  "historyChooseYear": "Year",
+  "historyChooseType": "Type",
+  "historyVehicleChip": "Vehicle: {name}. Change vehicle",
+  "@historyVehicleChip": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "historyEmptyTitle": "No services yet",
+  "historyEmptyBody": "Log your first service to build your car's history.",
+  "historyNoMatch": "No services match these filters",
+  "historyClearFilters": "Clear filters",
+  "historySelectRecord": "Select a record to see it here.",
+  "historyLoading": "Loading history",
+  "recordFactOdometer": "Odometer",
+  "recordFactCost": "Cost",
+  "recordFactShop": "Shop",
+  "recordItemsTitle": "Items covered",
+  "recordNoItems": "No schedule items. Nothing was reset.",
+  "recordNotesTitle": "Notes",
+  "recordNoNotes": "No notes",
+  "recordAdded": "Added {dateTime}",
+  "@recordAdded": {
+    "placeholders": {
+      "dateTime": {
+        "type": "String"
+      }
+    }
+  },
+  "recordDeleteTitle": "Delete this service?",
+  "recordDeleteBodyItems": "{items} will go back to their previous dates.",
+  "@recordDeleteBodyItems": {
+    "placeholders": {
+      "items": {
+        "type": "String"
+      }
+    }
+  },
+  "recordDeleteBodyNone": "It will be removed from your history and spending.",
+  "recordDeleted": "Service deleted",
+  "recordGone": "This service was deleted.",
+  "recordItemSemantic": "{name}. Open item",
+  "@recordItemSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "listAnd": "{first} and {last}",
+  "@listAnd": {
+    "description": "Joins the last two names of a list: 'Engine oil and Oil filter'.",
+    "placeholders": {
+      "first": {
+        "type": "String"
+      },
+      "last": {
+        "type": "String"
+      }
+    }
+  },
+  "logTitle": "Log service",
+  "logEditTitle": "Edit service",
+  "logFor": "For: {name}",
+  "@logFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "logChooseVehicle": "Choose the vehicle",
+  "logDate": "Date",
+  "logOdometer": "Odometer",
+  "logOdometerCurrent": "Current: {value}",
+  "@logOdometerCurrent": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "logOdometerRequired": "Enter the odometer reading.",
+  "logWhatDone": "What was done?",
+  "logAddCustom": "Add custom item",
+  "logChipSemantic": "{name}, {status}",
+  "@logChipSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "logType": "Type",
+  "logCost": "Cost (optional)",
+  "logCostInvalid": "Enter an amount like 120 or 120.50.",
+  "logCostNegative": "Cost can't be negative.",
+  "logCostDecimals": "{currency} uses {count, plural, =0{no decimals} =1{1 decimal place} other{{count} decimal places}}.",
+  "@logCostDecimals": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "logCurrency": "Currency",
+  "logCurrencyButton": "Currency: {code}. Change",
+  "@logCurrencyButton": {
+    "placeholders": {
+      "code": {
+        "type": "String"
+      }
+    }
+  },
+  "logShop": "Shop (optional)",
+  "logNotes": "Notes (optional)",
+  "logSave": "Save service",
+  "logDiscardTitle": "Discard this service?",
+  "logSaved": "Service saved · score now {score}",
+  "@logSaved": {
+    "placeholders": {
+      "score": {
+        "type": "int"
+      }
+    }
+  },
+  "logSavedKept": "{count, plural, =1{Saved to history. {items} keeps its newer date.} other{Saved to history. {items} keep their newer dates.}}",
+  "@logSavedKept": {
+    "description": "A backdated record didn't reset items with a newer last-done date (BR-SVC-02).",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "items": {
+        "type": "String"
+      }
+    }
+  },
+  "addLogServiceSub": "Record work done on your car",
+  "addAddVehicleSub": "Add another car to your garage",
+  "profileTitle": "Profile",
+  "profileGuestTitle": "Your garage is only on this phone",
+  "profileGuestBody": "If you delete the app or lose your phone, your data is gone.",
+  "profileBackUp": "Back up your garage",
+  "profileSignIn": "Sign in",
+  "profileSyncedMinutes": "{count, plural, =0{Synced just now} =1{Synced 1 min ago} other{Synced {count} min ago}}",
+  "@profileSyncedMinutes": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "profileSyncedAt": "Synced {date}",
+  "@profileSyncedAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "profileWaitingSync": "Waiting to sync ({count})",
+  "@profileWaitingSync": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "profileOffline": "Offline",
+  "profileVerifyEmail": "Verify your email to finish backing up",
+  "profileResendEmail": "Resend email",
+  "profileVerificationSent": "Verification email sent",
+  "profileAccountSemantic": "{name}, {email}, {sync}. Account details",
+  "@profileAccountSemantic": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "email": {
+        "type": "String"
+      },
+      "sync": {
+        "type": "String"
+      }
+    }
+  },
+  "profileEnableReminders": "Enable reminders",
+  "profileEnableRemindersBody": "Get a reminder before something is due.",
+  "profileGarage": "Garage",
+  "profileVehicles": "Vehicles",
+  "profilePreferences": "Preferences",
+  "profileCountry": "Country",
+  "profileNotSet": "Not set",
+  "profileDistanceUnit": "Distance unit",
+  "profileKilometres": "Kilometres",
+  "profileMiles": "Miles",
+  "profileCurrency": "Currency",
+  "profileLanguage": "Language",
+  "profileDigits": "Digits",
+  "profileDigitsWestern": "Western 0-9",
+  "profileDigitsArabic": "Arabic-Indic ٠-٩",
+  "profileNotifications": "Notifications",
+  "profileReminders": "Reminders",
+  "profileOn": "On",
+  "profileOff": "Off",
+  "profilePrivacy": "Privacy",
+  "profileAnalytics": "Usage analytics",
+  "profileAnalyticsSub": "Anonymous. No advertising.",
+  "profilePrivacyPolicy": "Privacy policy",
+  "profileTerms": "Terms of use",
+  "profileHelp": "Help",
+  "profileFaq": "FAQ",
+  "profileContact": "Contact support",
+  "profileSupportPromise": "We reply within 2 business days (Sunday to Thursday, Cairo time)",
+  "profileAccountActions": "Account",
+  "profileSignOut": "Sign out",
+  "profileDeleteAccount": "Delete account",
+  "profileEraseData": "Erase all data",
+  "profileSignOutTitle": "Sign out?",
+  "profileSignOutBody": "Your garage stays in your account. Sign in again any time to get it back.",
+  "profileUnsyncedTitle": "Some changes haven't synced",
+  "profileUnsyncedBody": "{count, plural, =1{1 change on this phone hasn't reached your account yet.} other{{count} changes on this phone haven't reached your account yet.}}",
+  "@profileUnsyncedBody": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "profileSyncNow": "Sync now",
+  "profileDiscardSignOut": "Discard and sign out",
+  "profileSignedOut": "Signed out",
+  "profileVersion": "{name} {version} ({build})",
+  "@profileVersion": {
+    "description": "Footer, for example 'TDC-mena Garage 1.0.0 (123)'.",
+    "placeholders": {
+      "name": {
+        "type": "String"
+      },
+      "version": {
+        "type": "String"
+      },
+      "build": {
+        "type": "String"
+      }
+    }
+  },
+  "profileSelectSetting": "Choose a setting to see it here.",
+  "profileValueSemantic": "{title}, {value}",
+  "@profileValueSemantic": {
+    "placeholders": {
+      "title": {
+        "type": "String"
+      },
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "regionSwitchBothTitle": "Also switch currency and units?",
+  "regionSwitchCurrencyTitle": "Also switch currency?",
+  "regionSwitchUnitTitle": "Also switch units?",
+  "regionSwitchBoth": "Switch currency to {currency} and distance to {unit}?",
+  "@regionSwitchBoth": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      },
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "regionSwitchCurrency": "Switch currency to {currency}?",
+  "@regionSwitchCurrency": {
+    "placeholders": {
+      "currency": {
+        "type": "String"
+      }
+    }
+  },
+  "regionSwitchUnit": "Switch distance to {unit}?",
+  "@regionSwitchUnit": {
+    "placeholders": {
+      "unit": {
+        "type": "String"
+      }
+    }
+  },
+  "regionSwitch": "Switch",
+  "regionKeep": "Keep current",
+  "regionPopularUpdated": "Popular brands updated for {country}",
+  "@regionPopularUpdated": {
+    "placeholders": {
+      "country": {
+        "type": "String"
+      }
+    }
+  },
+  "regionPopularDefault": "Popular brands set to the default list",
+  "unitKmOption": "Kilometres (km)",
+  "unitMiOption": "Miles (mi)",
+  "unitCaption": "Your readings are converted exactly. Nothing is lost when you switch.",
+  "currencyCaption": "New records use this currency. Existing records keep theirs.",
+  "currencySuggested": "Suggested",
+  "currencyAll": "All currencies",
+  "currencySearchHint": "Search currencies",
+  "currencyNoResults": "No currencies match \"{query}\"",
+  "@currencyNoResults": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "languageTitle": "Language & digits",
+  "languageDevice": "Same as device ({language})",
+  "@languageDevice": {
+    "placeholders": {
+      "language": {
+        "type": "String"
+      }
+    }
+  },
+  "digitsWesternOption": "Western (0 1 2 3)",
+  "digitsArabicOption": "Arabic-Indic ({digits})",
+  "digitsCaption": "VINs, plates and mileage always use Western digits.",
+  "@digitsArabicOption": {
+    "description": "The digits sample is built in code so it reads in order in both directions.",
+    "placeholders": {
+      "digits": {
+        "type": "String"
+      }
+    }
+  },
+  "notifOffInSettings": "Notifications are off in your phone's Settings.",
+  "notifOpenSettings": "Open Settings",
+  "notifNotAsked": "Allow notifications so your reminders can reach you.",
+  "notifAllow": "Allow",
+  "notifServiceReminders": "Service reminders",
+  "notifServiceRemindersSub": "Due soon, overdue and mileage reminders",
+  "notifSchedule": "Reminders arrive at 9:00, 30, 7 and 1 day before something is due. Overdue reminders follow on days 1, 3, 7 and 14, and monthly for brakes, tires and brake fluid.",
+  "authBackupTitle": "Back up and sync your garage",
+  "authWelcomeTitle": "Welcome back",
+  "authBody": "Use your account on any device. Your data stays private.",
+  "authApple": "Continue with Apple",
+  "authGoogle": "Continue with Google",
+  "authEmail": "Continue with email",
+  "authTerms": "Terms",
+  "authPrivacy": "Privacy Policy",
+  "authEmailTitle": "Your email",
+  "authEmailLabel": "Email",
+  "authEmailInvalid": "Enter a valid email address.",
+  "authCreatePasswordTitle": "Create a password",
+  "authEnterPasswordTitle": "Enter your password",
+  "authPasswordLabel": "Password",
+  "authShowPassword": "Show password",
+  "authHidePassword": "Hide password",
+  "authPasswordHint": "At least 8 characters",
+  "authCreateAccount": "Create account",
+  "authSignIn": "Sign in",
+  "authForgot": "Forgot password?",
+  "authWrongPassword": "That password doesn't match.",
+  "authTooMany": "Too many tries. Try again in 5 minutes.",
+  "authOffline": "You need a connection to sign in.",
+  "authResetTitle": "Reset your password",
+  "authResetBody": "We'll email you a reset link at {email}.",
+  "@authResetBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "authSendLink": "Send link",
+  "authResetSentTitle": "Check your inbox",
+  "authResetSentBody": "Open the link in the email to choose a new password.",
+  "authVerifyTitle": "Check your email to verify your account.",
+  "authVerifyBody": "We sent a link to {email}. Your garage stays on this phone until you verify.",
+  "@authVerifyBody": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "authResend": "Resend",
+  "authResendIn": "Resend in {seconds} s",
+  "@authResendIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "authOpenMail": "Open Mail app",
+  "authVerificationSent": "Verification email sent",
+  "authSignedIn": "Signed in",
+  "authLegal": "By continuing you agree to the Terms and Privacy Policy.",
+  "backupBenefitHistory": "Keep your history if you lose your phone",
+  "backupBenefitDevices": "Use it on your iPad too",
+  "backupBenefitPrivate": "Private to you. No advertising.",
+  "backupWarning": "Right now your data is only on this phone.",
+  "backupNow": "Back up now",
+  "backupNotNow": "Not now",
+  "backupVehicles": "{count, plural, =1{1 vehicle} other{{count} vehicles}}",
+  "@backupVehicles": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "backupRecords": "{count, plural, =1{1 record} other{{count} records}}",
+  "@backupRecords": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "backupProgress": "Backing up {vehicles} and {records}…",
+  "@backupProgress": {
+    "placeholders": {
+      "vehicles": {
+        "type": "String"
+      },
+      "records": {
+        "type": "String"
+      }
+    }
+  },
+  "backupPercent": "{percent}%",
+  "@backupPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "backupWaiting": "Waiting for connection… Your data is safe on this phone.",
+  "backupFailedTitle": "Backup didn't finish",
+  "backupFailedBody": "Your data is still safe on this phone.",
+  "backupDoneTitle": "Your garage is backed up",
+  "backupDone": "Done",
+  "mergeTitle": "This account already has a garage",
+  "mergeOption": "Merge into this account",
+  "mergeOptionBody": "Adds this phone's {device} to your account's {account}.",
+  "@mergeOptionBody": {
+    "placeholders": {
+      "device": {
+        "type": "String"
+      },
+      "account": {
+        "type": "String"
+      }
+    }
+  },
+  "mergeRecommended": "Recommended",
+  "discardOption": "Discard this phone's data",
+  "discardOptionBody": "Removes the {device} on this phone and loads your account.",
+  "@discardOptionBody": {
+    "placeholders": {
+      "device": {
+        "type": "String"
+      }
+    }
+  },
+  "discardDialogTitle": "Discard this phone's data?",
+  "discardDialogBody": "This can't be undone. Type {word} to confirm.",
+  "@discardDialogBody": {
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "discardWord": "DISCARD",
+  "discardConfirm": "Discard",
+  "discardDone": "This phone now shows your account's garage",
+  "limitTitle": "Choose what to bring",
+  "limitBody": "An account holds up to 25 vehicles. Vehicles you don't bring are removed from this phone.",
+  "limitCounter": "You can bring {allowed} of {total}",
+  "@limitCounter": {
+    "placeholders": {
+      "allowed": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "dupTitle": "These look like the same car",
+  "dupBody": "Both are kept. Remove one if it's a duplicate.",
+  "dupRemove": "Remove this phone's copy",
+  "dupOnPhone": "On this phone",
+  "dupInAccount": "In your account",
+  "eraseDeleteTitle": "Delete account",
+  "eraseEraseTitle": "Erase all data",
+  "eraseOwnerDevices": "Your vehicles, history and settings are deleted from all devices.",
+  "eraseOwnerBackups": "Backups are cleared within 30 days.",
+  "eraseOwnerFinal": "This can't be undone.",
+  "eraseGuest": "Everything on this phone is erased immediately.",
+  "eraseTypeToConfirm": "Type {word} to confirm",
+  "@eraseTypeToConfirm": {
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "eraseDeleteWord": "DELETE",
+  "eraseEraseWord": "ERASE",
+  "eraseOffline": "You need a connection to delete your account.",
+  "reauthTitle": "Confirm it's you",
+  "reauthBody": "For your security, sign in again before deleting your account.",
+  "reauthAccount": "Signed in as {email}",
+  "@reauthAccount": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "reauthOr": "or use your password",
+  "reauthConfirm": "Confirm",
+  "helpTitle": "Help",
+  "helpSearch": "Search help",
+  "helpTopics": "Topics",
+  "helpCatGettingStarted": "Getting started",
+  "helpCatHealthScore": "Health score",
+  "helpCatReminders": "Reminders",
+  "helpCatBackup": "Backup & sync",
+  "helpCatPrivacy": "Privacy",
+  "helpQuestionCount": "{count, plural, =1{1 question} other{{count} questions}}",
+  "@helpQuestionCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "helpOffline": "Showing saved answers. Connect for the full help centre.",
+  "helpResults": "{count, plural, =1{1 answer} other{{count} answers}}",
+  "@helpResults": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "helpNoResults": "No answers for “{query}”",
+  "@helpNoResults": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "helpNoResultsHint": "Try other words, or email us below.",
+  "helpContactTitle": "Contact us",
+  "helpContactLanguage": "We reply in the language you write in.",
+  "helpEmailSubject": "TDC-mena Garage support",
+  "helpEmailCopied": "Email address copied",
+  "helpEmailHint": "Opens your email app",
+  "helpLegal": "Legal",
+  "helpStillNeed": "Still need help?",
+  "legalLoadsFrom": "This page loads from {address} in the in-app browser.",
+  "@legalLoadsFrom": {
+    "placeholders": {
+      "address": {
+        "type": "String"
+      }
+    }
+  },
+  "editVehicleTitle": "Edit vehicle",
+  "editBrand": "Brand",
+  "editModel": "Model",
+  "editSaved": "Changes saved",
+  "editDeleteVehicle": "Delete vehicle",
+  "editOdometerLower": "Can't be lower than the last reading ({mileage}). Correct it in Mileage history.",
+  "@editOdometerLower": {
+    "placeholders": {
+      "mileage": {
+        "type": "String"
+      }
+    }
+  },
+  "fuelChangeTitle": "Update the schedule for {fuel}?",
+  "@fuelChangeTitle": {
+    "placeholders": {
+      "fuel": {
+        "type": "String"
+      }
+    }
+  },
+  "fuelChangeBody": "We'll replace the typical items. Your custom items and history stay.",
+  "fuelChangeUpdate": "Update schedule",
+  "fuelChangeKeep": "Keep current schedule",
+  "fuelChangeKeepIntervals": "Keep my edited intervals",
+  "deleteVehicleBodyCount": "{count, plural, =0{This deletes its schedule. This can't be undone.} =1{This deletes its schedule and 1 service record. This can't be undone.} other{This deletes its schedule and {count} service records. This can't be undone.}}",
+  "@deleteVehicleBodyCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "alertMileageReview": "Check a mileage reading",
+  "reviewTitle": "Check this reading",
+  "reviewBody": "A reading from your other device is lower than an earlier one.",
+  "reviewNeedsReview": "Needs review",
+  "reviewThisDevice": "This device",
+  "reviewUseCorrection": "Use {value} as a correction",
+  "@reviewUseCorrection": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewDelete": "Delete {value}",
+  "@reviewDelete": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewCorrected": "Saved as a correction",
+  "reviewCardSemantic": "{value}, {date}, {device}",
+  "@reviewCardSemantic": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      },
+      "device": {
+        "type": "String"
+      }
+    }
+  },
+  "offlineTitle": "You're offline",
+  "errorGeneric": "Something went wrong. Try again.",
+  "actionRetryShort": "Retry",
+  "loading": "Loading",
+  "syncSyncing": "Syncing",
+  "syncPending": "{count, plural, =1{1 change waiting to sync} other{{count} changes waiting to sync}}",
+  "@syncPending": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "syncOffline": "Offline. Changes will sync when you're back online.",
+  "syncNeedsReview": "A mileage reading needs review",
+  "updateTitle": "Update required",
+  "updateBody": "This version is no longer supported.",
+  "updateSafe": "Your data on this phone is safe.",
+  "updateAction": "Update",
+  "notifDays": "{count, plural, =1{{n} day} other{{n} days}}",
+  "@notifDays": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "notifDueIn": "{item} due in {days}",
+  "@notifDueIn": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "notifDueTomorrow": "{item} due tomorrow",
+  "@notifDueTomorrow": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      }
+    }
+  },
+  "notifOverdue": "{item} overdue by {days}",
+  "@notifOverdue": {
+    "placeholders": {
+      "item": {
+        "type": "String"
+      },
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "notifBundle": "{count, plural, other{{n} items need attention}}",
+  "@notifBundle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "n": {
+        "type": "String"
+      }
+    }
+  },
+  "notifMileageTitle": "Update your mileage",
+  "notifMileageBody": "It's been {days}. It takes {seconds} seconds.",
+  "@notifMileageBody": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      },
+      "seconds": {
+        "type": "String"
+      }
+    }
+  }
+}

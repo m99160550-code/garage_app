@@ -1,0 +1,845 @@
+import '../../settings/domain/distance_unit.dart';
+import '../domain/brand.dart';
+import '../../vehicles/domain/body_type.dart';
+import '../../vehicles/domain/fuel_type.dart';
+import '../domain/country.dart';
+import '../domain/vehicle_model.dart';
+import 'reference_repository.dart';
+
+/// Mock catalogue: MENA first-market countries plus the main expatriate and
+/// consent-region countries. The real list comes from the reference data
+/// pipeline (FR-REF-12).
+class MockReferenceRepository implements ReferenceRepository {
+  const MockReferenceRepository();
+
+  static const _km = DistanceUnit.km;
+  static const _gulf = PopularListCode.gulf;
+
+  static const List<Country> _countries = [
+    // Gulf (Popular list: Saudi Arabia & Gulf).
+    Country(
+      code: 'SA',
+      nameEn: 'Saudi Arabia',
+      nameAr: 'السعودية',
+      defaultCurrency: 'SAR',
+      defaultDistanceUnit: _km,
+      popularList: _gulf,
+      aliases: ['KSA'],
+    ),
+    Country(
+      code: 'AE',
+      nameEn: 'United Arab Emirates',
+      nameAr: 'الإمارات',
+      defaultCurrency: 'AED',
+      defaultDistanceUnit: _km,
+      popularList: _gulf,
+      aliases: ['UAE', 'Emirates'],
+    ),
+    Country(
+      code: 'KW',
+      nameEn: 'Kuwait',
+      nameAr: 'الكويت',
+      defaultCurrency: 'KWD',
+      defaultDistanceUnit: _km,
+      popularList: _gulf,
+    ),
+    Country(
+      code: 'QA',
+      nameEn: 'Qatar',
+      nameAr: 'قطر',
+      defaultCurrency: 'QAR',
+      defaultDistanceUnit: _km,
+      popularList: _gulf,
+    ),
+    Country(
+      code: 'BH',
+      nameEn: 'Bahrain',
+      nameAr: 'البحرين',
+      defaultCurrency: 'BHD',
+      defaultDistanceUnit: _km,
+      popularList: _gulf,
+    ),
+    Country(
+      code: 'OM',
+      nameEn: 'Oman',
+      nameAr: 'عُمان',
+      defaultCurrency: 'OMR',
+      defaultDistanceUnit: _km,
+      popularList: _gulf,
+    ),
+    // Egypt (Popular list: Egypt).
+    Country(
+      code: 'EG',
+      nameEn: 'Egypt',
+      nameAr: 'مصر',
+      defaultCurrency: 'EGP',
+      defaultDistanceUnit: _km,
+      popularList: PopularListCode.egypt,
+    ),
+    // Rest of MENA (default Popular list, A-17).
+    Country(code: 'JO', nameEn: 'Jordan', nameAr: 'الأردن', defaultCurrency: 'JOD', defaultDistanceUnit: _km),
+    Country(code: 'LB', nameEn: 'Lebanon', nameAr: 'لبنان', defaultCurrency: 'LBP', defaultDistanceUnit: _km),
+    Country(code: 'IQ', nameEn: 'Iraq', nameAr: 'العراق', defaultCurrency: 'IQD', defaultDistanceUnit: _km),
+    Country(code: 'MA', nameEn: 'Morocco', nameAr: 'المغرب', defaultCurrency: 'MAD', defaultDistanceUnit: _km),
+    Country(code: 'TN', nameEn: 'Tunisia', nameAr: 'تونس', defaultCurrency: 'TND', defaultDistanceUnit: _km),
+    Country(code: 'DZ', nameEn: 'Algeria', nameAr: 'الجزائر', defaultCurrency: 'DZD', defaultDistanceUnit: _km),
+    Country(
+      code: 'TR',
+      nameEn: 'Türkiye',
+      nameAr: 'تركيا',
+      defaultCurrency: 'TRY',
+      defaultDistanceUnit: _km,
+      aliases: ['Turkey'],
+    ),
+    // Other markets.
+    Country(
+      code: 'US',
+      nameEn: 'United States',
+      nameAr: 'الولايات المتحدة',
+      defaultCurrency: 'USD',
+      defaultDistanceUnit: DistanceUnit.mi,
+      aliases: ['USA', 'America'],
+    ),
+    Country(code: 'CA', nameEn: 'Canada', nameAr: 'كندا', defaultCurrency: 'CAD', defaultDistanceUnit: _km),
+    Country(
+      code: 'GB',
+      nameEn: 'United Kingdom',
+      nameAr: 'المملكة المتحدة',
+      defaultCurrency: 'GBP',
+      defaultDistanceUnit: DistanceUnit.mi,
+      aliases: ['UK', 'Britain'],
+    ),
+    Country(code: 'IE', nameEn: 'Ireland', nameAr: 'أيرلندا', defaultCurrency: 'EUR', defaultDistanceUnit: _km),
+    Country(code: 'DE', nameEn: 'Germany', nameAr: 'ألمانيا', defaultCurrency: 'EUR', defaultDistanceUnit: _km),
+    Country(code: 'FR', nameEn: 'France', nameAr: 'فرنسا', defaultCurrency: 'EUR', defaultDistanceUnit: _km),
+    Country(code: 'IT', nameEn: 'Italy', nameAr: 'إيطاليا', defaultCurrency: 'EUR', defaultDistanceUnit: _km),
+    Country(code: 'ES', nameEn: 'Spain', nameAr: 'إسبانيا', defaultCurrency: 'EUR', defaultDistanceUnit: _km),
+    Country(code: 'NL', nameEn: 'Netherlands', nameAr: 'هولندا', defaultCurrency: 'EUR', defaultDistanceUnit: _km),
+    Country(code: 'SE', nameEn: 'Sweden', nameAr: 'السويد', defaultCurrency: 'SEK', defaultDistanceUnit: _km),
+    Country(code: 'NO', nameEn: 'Norway', nameAr: 'النرويج', defaultCurrency: 'NOK', defaultDistanceUnit: _km),
+    Country(code: 'CH', nameEn: 'Switzerland', nameAr: 'سويسرا', defaultCurrency: 'CHF', defaultDistanceUnit: _km),
+    Country(code: 'IN', nameEn: 'India', nameAr: 'الهند', defaultCurrency: 'INR', defaultDistanceUnit: _km),
+    Country(code: 'PK', nameEn: 'Pakistan', nameAr: 'باكستان', defaultCurrency: 'PKR', defaultDistanceUnit: _km),
+    Country(code: 'AU', nameEn: 'Australia', nameAr: 'أستراليا', defaultCurrency: 'AUD', defaultDistanceUnit: _km),
+  ];
+
+  @override
+  Future<List<Country>> countries() async => _countries;
+
+  /// Synchronous lookup for seeding mock data.
+  /// The sample countries (for tests).
+  static List<Country> get allCountries => _countries;
+
+  static Country? countryByCode(String code) => _countries.where((c) => c.code == code.toUpperCase()).firstOrNull;
+
+  // ---------------------------------------------------------------------
+  // Brands (D26 list of 35). Arabic names follow manufacturers' regional
+  // usage and are pending the native-speaker review (BR-REF-06).
+  // `modelsLoaded` mirrors data phase 1: brands on any Popular list.
+  // ---------------------------------------------------------------------
+  static const _eu = RegionTab.european;
+  static const _jp = RegionTab.japanese;
+  static const _kr = RegionTab.korean;
+  static const _cn = RegionTab.chinese;
+  static const _us = RegionTab.american;
+
+  static const List<Brand> _brands = [
+    Brand(
+      id: 'mercedes-benz',
+      nameEn: 'Mercedes-Benz',
+      nameAr: 'مرسيدس-بنز',
+      monogram: 'ME',
+      originCountry: 'DE',
+      regionTab: _eu,
+      aliases: ['Mercedes', 'Benz', 'Merc', 'مرسيدس'],
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'bmw',
+      nameEn: 'BMW',
+      nameAr: 'بي إم دبليو',
+      monogram: 'BM',
+      originCountry: 'DE',
+      regionTab: _eu,
+      modelsLoaded: true,
+    ),
+    Brand(id: 'audi', nameEn: 'Audi', nameAr: 'أودي', monogram: 'AU', originCountry: 'DE', regionTab: _eu),
+    Brand(
+      id: 'volkswagen',
+      nameEn: 'Volkswagen',
+      nameAr: 'فولكس فاجن',
+      monogram: 'VW',
+      originCountry: 'DE',
+      regionTab: _eu,
+      aliases: ['VW', 'فولكس'],
+    ),
+    Brand(id: 'skoda', nameEn: 'Skoda', nameAr: 'سكودا', monogram: 'SK', originCountry: 'CZ', regionTab: _eu),
+    Brand(id: 'peugeot', nameEn: 'Peugeot', nameAr: 'بيجو', monogram: 'PE', originCountry: 'FR', regionTab: _eu),
+    Brand(id: 'renault', nameEn: 'Renault', nameAr: 'رينو', monogram: 'RE', originCountry: 'FR', regionTab: _eu),
+    Brand(id: 'fiat', nameEn: 'Fiat', nameAr: 'فيات', monogram: 'FI', originCountry: 'IT', regionTab: _eu),
+    Brand(
+      id: 'land-rover',
+      nameEn: 'Land Rover',
+      nameAr: 'لاند روفر',
+      monogram: 'LR',
+      originCountry: 'GB',
+      regionTab: _eu,
+      aliases: ['Range Rover', 'رنج روفر'],
+    ),
+    Brand(id: 'volvo', nameEn: 'Volvo', nameAr: 'فولفو', monogram: 'VO', originCountry: 'SE', regionTab: _eu),
+    Brand(
+      id: 'toyota',
+      nameEn: 'Toyota',
+      nameAr: 'تويوتا',
+      monogram: 'TO',
+      originCountry: 'JP',
+      regionTab: _jp,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'nissan',
+      nameEn: 'Nissan',
+      nameAr: 'نيسان',
+      monogram: 'NI',
+      originCountry: 'JP',
+      regionTab: _jp,
+      modelsLoaded: true,
+    ),
+    Brand(id: 'honda', nameEn: 'Honda', nameAr: 'هوندا', monogram: 'HO', originCountry: 'JP', regionTab: _jp),
+    Brand(id: 'mazda', nameEn: 'Mazda', nameAr: 'مازدا', monogram: 'MA', originCountry: 'JP', regionTab: _jp),
+    Brand(
+      id: 'mitsubishi',
+      nameEn: 'Mitsubishi',
+      nameAr: 'ميتسوبيشي',
+      monogram: 'MI',
+      originCountry: 'JP',
+      regionTab: _jp,
+    ),
+    Brand(id: 'suzuki', nameEn: 'Suzuki', nameAr: 'سوزوكي', monogram: 'SU', originCountry: 'JP', regionTab: _jp),
+    Brand(
+      id: 'lexus',
+      nameEn: 'Lexus',
+      nameAr: 'لكزس',
+      monogram: 'LE',
+      originCountry: 'JP',
+      regionTab: _jp,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'hyundai',
+      nameEn: 'Hyundai',
+      nameAr: 'هيونداي',
+      monogram: 'HY',
+      originCountry: 'KR',
+      regionTab: _kr,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'kia',
+      nameEn: 'Kia',
+      nameAr: 'كيا',
+      monogram: 'KI',
+      originCountry: 'KR',
+      regionTab: _kr,
+      modelsLoaded: true,
+    ),
+    Brand(id: 'genesis', nameEn: 'Genesis', nameAr: 'جينيسيس', monogram: 'GS', originCountry: 'KR', regionTab: _kr),
+    Brand(
+      id: 'mg',
+      nameEn: 'MG',
+      nameAr: 'إم جي',
+      monogram: 'MG',
+      originCountry: 'CN',
+      regionTab: _cn,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'chery',
+      nameEn: 'Chery',
+      nameAr: 'شيري',
+      monogram: 'CH',
+      originCountry: 'CN',
+      regionTab: _cn,
+      modelsLoaded: true,
+    ),
+    Brand(id: 'geely', nameEn: 'Geely', nameAr: 'جيلي', monogram: 'GE', originCountry: 'CN', regionTab: _cn),
+    Brand(
+      id: 'haval',
+      nameEn: 'Haval',
+      nameAr: 'هافال',
+      monogram: 'HA',
+      originCountry: 'CN',
+      regionTab: _cn,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'byd',
+      nameEn: 'BYD',
+      nameAr: 'بي واي دي',
+      monogram: 'BY',
+      originCountry: 'CN',
+      regionTab: _cn,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'changan',
+      nameEn: 'Changan',
+      nameAr: 'شانجان',
+      monogram: 'CN',
+      originCountry: 'CN',
+      regionTab: _cn,
+      modelsLoaded: true,
+    ),
+    Brand(id: 'gac', nameEn: 'GAC', nameAr: 'جي إيه سي', monogram: 'GA', originCountry: 'CN', regionTab: _cn),
+    Brand(
+      id: 'jetour',
+      nameEn: 'Jetour',
+      nameAr: 'جيتور',
+      monogram: 'JE',
+      originCountry: 'CN',
+      regionTab: _cn,
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'chevrolet',
+      nameEn: 'Chevrolet',
+      nameAr: 'شيفروليه',
+      monogram: 'CV',
+      originCountry: 'US',
+      regionTab: _us,
+      aliases: ['Chevy', 'شفر'],
+      modelsLoaded: true,
+    ),
+    Brand(
+      id: 'ford',
+      nameEn: 'Ford',
+      nameAr: 'فورد',
+      monogram: 'FO',
+      originCountry: 'US',
+      regionTab: _us,
+      modelsLoaded: true,
+    ),
+    Brand(id: 'jeep', nameEn: 'Jeep', nameAr: 'جيب', monogram: 'JP', originCountry: 'US', regionTab: _us),
+    Brand(id: 'dodge', nameEn: 'Dodge', nameAr: 'دودج', monogram: 'DO', originCountry: 'US', regionTab: _us),
+    Brand(id: 'gmc', nameEn: 'GMC', nameAr: 'جي إم سي', monogram: 'GM', originCountry: 'US', regionTab: _us),
+    Brand(id: 'cadillac', nameEn: 'Cadillac', nameAr: 'كاديلاك', monogram: 'CA', originCountry: 'US', regionTab: _us),
+    Brand(id: 'tesla', nameEn: 'Tesla', nameAr: 'تسلا', monogram: 'TE', originCountry: 'US', regionTab: _us),
+  ];
+
+  /// Ranked lists from the requirements (D32).
+  static const Map<PopularListCode, List<String>> _popular = {
+    PopularListCode.standard: [
+      'toyota',
+      'nissan',
+      'hyundai',
+      'kia',
+      'chevrolet',
+      'mg',
+      'chery',
+      'jetour',
+      'haval',
+      'mercedes-benz',
+      'ford',
+      'bmw',
+    ],
+    PopularListCode.egypt: [
+      'nissan',
+      'mg',
+      'chery',
+      'jetour',
+      'hyundai',
+      'toyota',
+      'kia',
+      'chevrolet',
+      'mercedes-benz',
+      'haval',
+      'changan',
+      'byd',
+    ],
+    PopularListCode.gulf: [
+      'toyota',
+      'hyundai',
+      'kia',
+      'nissan',
+      'ford',
+      'lexus',
+      'mg',
+      'haval',
+      'jetour',
+      'chevrolet',
+      'mercedes-benz',
+      'bmw',
+    ],
+  };
+
+  @override
+  Future<List<Brand>> brands() async => _brands;
+
+  @override
+  Future<Map<PopularListCode, List<String>>> popularLists() async => _popular;
+
+  // ---------------------------------------------------------------------
+  // Models: phase 1 data for the 15 brands on any Popular list (FR-REF-12).
+  // Arabic names are pending the native-speaker review (BR-REF-06).
+  // ---------------------------------------------------------------------
+  static const List<VehicleModel> _models = [
+    // toyota
+    VehicleModel(
+      id: 'toyota-land-cruiser',
+      brandId: 'toyota',
+      nameEn: 'Land Cruiser',
+      nameAr: 'لاند كروزر',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'toyota-camry',
+      brandId: 'toyota',
+      nameEn: 'Camry',
+      nameAr: 'كامري',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.hybrid,
+    ),
+    VehicleModel(
+      id: 'toyota-corolla',
+      brandId: 'toyota',
+      nameEn: 'Corolla',
+      nameAr: 'كورولا',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'toyota-hilux',
+      brandId: 'toyota',
+      nameEn: 'Hilux',
+      nameAr: 'هايلكس',
+      bodyType: BodyType.pickup,
+      defaultFuelType: FuelType.diesel,
+    ),
+    // nissan
+    VehicleModel(
+      id: 'nissan-patrol',
+      brandId: 'nissan',
+      nameEn: 'Patrol',
+      nameAr: 'باترول',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'nissan-sunny',
+      brandId: 'nissan',
+      nameEn: 'Sunny',
+      nameAr: 'صني',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'nissan-altima',
+      brandId: 'nissan',
+      nameEn: 'Altima',
+      nameAr: 'ألتيما',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'nissan-x-trail',
+      brandId: 'nissan',
+      nameEn: 'X-Trail',
+      nameAr: 'إكس تريل',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // hyundai
+    VehicleModel(
+      id: 'hyundai-elantra',
+      brandId: 'hyundai',
+      nameEn: 'Elantra',
+      nameAr: 'إلنترا',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'hyundai-tucson',
+      brandId: 'hyundai',
+      nameEn: 'Tucson',
+      nameAr: 'توسان',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'hyundai-accent',
+      brandId: 'hyundai',
+      nameEn: 'Accent',
+      nameAr: 'أكسنت',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'hyundai-santa-fe',
+      brandId: 'hyundai',
+      nameEn: 'Santa Fe',
+      nameAr: 'سانتا في',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // kia
+    VehicleModel(
+      id: 'kia-sportage',
+      brandId: 'kia',
+      nameEn: 'Sportage',
+      nameAr: 'سبورتاج',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'kia-pegas',
+      brandId: 'kia',
+      nameEn: 'Pegas',
+      nameAr: 'بيجاس',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'kia-k5',
+      brandId: 'kia',
+      nameEn: 'K5',
+      nameAr: 'كي 5',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'kia-sorento',
+      brandId: 'kia',
+      nameEn: 'Sorento',
+      nameAr: 'سورينتو',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // chevrolet
+    VehicleModel(
+      id: 'chevrolet-tahoe',
+      brandId: 'chevrolet',
+      nameEn: 'Tahoe',
+      nameAr: 'تاهو',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'chevrolet-silverado',
+      brandId: 'chevrolet',
+      nameEn: 'Silverado',
+      nameAr: 'سيلفرادو',
+      bodyType: BodyType.pickup,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'chevrolet-malibu',
+      brandId: 'chevrolet',
+      nameEn: 'Malibu',
+      nameAr: 'ماليبو',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'chevrolet-captiva',
+      brandId: 'chevrolet',
+      nameEn: 'Captiva',
+      nameAr: 'كابتيفا',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // mg
+    VehicleModel(
+      id: 'mg-zs',
+      brandId: 'mg',
+      nameEn: 'ZS',
+      nameAr: 'زد إس',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'mg-mg5',
+      brandId: 'mg',
+      nameEn: 'MG5',
+      nameAr: 'إم جي 5',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'mg-hs',
+      brandId: 'mg',
+      nameEn: 'HS',
+      nameAr: 'إتش إس',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // chery
+    VehicleModel(
+      id: 'chery-tiggo-7-pro',
+      brandId: 'chery',
+      nameEn: 'Tiggo 7 Pro',
+      nameAr: 'تيجو 7 برو',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'chery-tiggo-4-pro',
+      brandId: 'chery',
+      nameEn: 'Tiggo 4 Pro',
+      nameAr: 'تيجو 4 برو',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'chery-arrizo-5',
+      brandId: 'chery',
+      nameEn: 'Arrizo 5',
+      nameAr: 'أريزو 5',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'chery-tiggo-8',
+      brandId: 'chery',
+      nameEn: 'Tiggo 8',
+      nameAr: 'تيجو 8',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // jetour
+    VehicleModel(
+      id: 'jetour-x70',
+      brandId: 'jetour',
+      nameEn: 'X70',
+      nameAr: 'إكس 70',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'jetour-dashing',
+      brandId: 'jetour',
+      nameEn: 'Dashing',
+      nameAr: 'داشينج',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'jetour-t2',
+      brandId: 'jetour',
+      nameEn: 'T2',
+      nameAr: 'تي 2',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // haval
+    VehicleModel(
+      id: 'haval-h6',
+      brandId: 'haval',
+      nameEn: 'H6',
+      nameAr: 'إتش 6',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'haval-jolion',
+      brandId: 'haval',
+      nameEn: 'Jolion',
+      nameAr: 'جوليون',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'haval-dargo',
+      brandId: 'haval',
+      nameEn: 'Dargo',
+      nameAr: 'دارجو',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // mercedes-benz
+    VehicleModel(
+      id: 'mercedes-benz-c-class',
+      brandId: 'mercedes-benz',
+      nameEn: 'C-Class',
+      nameAr: 'الفئة C',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'mercedes-benz-e-class',
+      brandId: 'mercedes-benz',
+      nameEn: 'E-Class',
+      nameAr: 'الفئة E',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'mercedes-benz-gle',
+      brandId: 'mercedes-benz',
+      nameEn: 'GLE',
+      nameAr: 'جي إل إي',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'mercedes-benz-s-class',
+      brandId: 'mercedes-benz',
+      nameEn: 'S-Class',
+      nameAr: 'الفئة S',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // ford
+    VehicleModel(
+      id: 'ford-f-150',
+      brandId: 'ford',
+      nameEn: 'F-150',
+      nameAr: 'إف-150',
+      bodyType: BodyType.pickup,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'ford-explorer',
+      brandId: 'ford',
+      nameEn: 'Explorer',
+      nameAr: 'إكسبلورر',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'ford-territory',
+      brandId: 'ford',
+      nameEn: 'Territory',
+      nameAr: 'تيريتوري',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'ford-mustang',
+      brandId: 'ford',
+      nameEn: 'Mustang',
+      nameAr: 'موستانج',
+      bodyType: BodyType.coupe,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // bmw
+    VehicleModel(
+      id: 'bmw-3-series',
+      brandId: 'bmw',
+      nameEn: '3 Series',
+      nameAr: 'الفئة الثالثة',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'bmw-5-series',
+      brandId: 'bmw',
+      nameEn: '5 Series',
+      nameAr: 'الفئة الخامسة',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'bmw-x5',
+      brandId: 'bmw',
+      nameEn: 'X5',
+      nameAr: 'إكس 5',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'bmw-x3',
+      brandId: 'bmw',
+      nameEn: 'X3',
+      nameAr: 'إكس 3',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // lexus
+    VehicleModel(
+      id: 'lexus-lx',
+      brandId: 'lexus',
+      nameEn: 'LX',
+      nameAr: 'إل إكس',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'lexus-es',
+      brandId: 'lexus',
+      nameEn: 'ES',
+      nameAr: 'إي إس',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.hybrid,
+    ),
+    VehicleModel(
+      id: 'lexus-rx',
+      brandId: 'lexus',
+      nameEn: 'RX',
+      nameAr: 'آر إكس',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.hybrid,
+    ),
+    // changan
+    VehicleModel(
+      id: 'changan-cs35-plus',
+      brandId: 'changan',
+      nameEn: 'CS35 Plus',
+      nameAr: 'سي إس 35 بلس',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'changan-alsvin',
+      brandId: 'changan',
+      nameEn: 'Alsvin',
+      nameAr: 'ألسفين',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.petrol,
+    ),
+    VehicleModel(
+      id: 'changan-cs75',
+      brandId: 'changan',
+      nameEn: 'CS75',
+      nameAr: 'سي إس 75',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.petrol,
+    ),
+    // byd
+    VehicleModel(
+      id: 'byd-song-plus',
+      brandId: 'byd',
+      nameEn: 'Song Plus',
+      nameAr: 'سونغ بلس',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.hybrid,
+    ),
+    VehicleModel(
+      id: 'byd-atto-3',
+      brandId: 'byd',
+      nameEn: 'Atto 3',
+      nameAr: 'أتو 3',
+      bodyType: BodyType.suv,
+      defaultFuelType: FuelType.ev,
+    ),
+    VehicleModel(
+      id: 'byd-seal',
+      brandId: 'byd',
+      nameEn: 'Seal',
+      nameAr: 'سيل',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.ev,
+    ),
+    VehicleModel(
+      id: 'byd-han',
+      brandId: 'byd',
+      nameEn: 'Han',
+      nameAr: 'هان',
+      bodyType: BodyType.sedan,
+      defaultFuelType: FuelType.ev,
+    ),
+  ];
+
+  @override
+  Future<List<VehicleModel>> models(String brandId) async => _models.where((m) => m.brandId == brandId).toList();
+}
